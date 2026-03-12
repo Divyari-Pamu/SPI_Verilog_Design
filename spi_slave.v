@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/11/2025 05:55:38 PM
+// Create Date:
 // Design Name: 
 // Module Name: spi_s
 // Project Name: 
