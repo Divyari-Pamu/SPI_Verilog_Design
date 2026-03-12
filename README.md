@@ -15,3 +15,7 @@ Slave TX : 3C
 Results
 Master RX: 3C
 Slave RX : A5
+
+## Simulation Waveform
+
+![SPI Waveform](spi_waveform.png)

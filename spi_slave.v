@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/11/2025 05:55:38 PM
+// Create Date:
 // Design Name: 
-// Module Name: spi_s
+// Module Name: spi_s 
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -32,7 +32,7 @@ module spi_s(
     reg [8:0] tx_reg;
     reg [8:0] rx_reg;
 
-    // Send data on falling edge
+
     always @(posedge sclk or posedge reset_n or posedge ss_n) begin
         if (reset_n || ss_n) begin
             bit_cnt <= 3'd7;
@@ -43,7 +43,6 @@ module spi_s(
         end
     end
 
-    // Sample MOSI on rising edge (only when active)
     always @(negedge sclk or posedge reset_n) begin
         if (reset_n) begin
             rx_reg <= 8'd0;
@@ -51,7 +50,7 @@ module spi_s(
         end else if (!ss_n) begin
             rx_reg[bit_cnt] <= mosi;
             if (bit_cnt == 0) begin
-                slave_rx <= {rx_reg[7:1], mosi}; // ensure last bit captured cleanly
+                slave_rx <= {rx_reg[7:1], mosi};
                 bit_cnt <= 3'd7;
             end else begin
                 bit_cnt <= bit_cnt - 1;
