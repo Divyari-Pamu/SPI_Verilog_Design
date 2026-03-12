@@ -5,7 +5,7 @@
 // 
 // Create Date:
 // Design Name: 
-// Module Name: spi_s
+// Module Name: spi_s 
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
